@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @favorites_list.name %>
+</p>
+<h2>Attractions</h2>
+<%= render partial: "attraction", collection: @attractions %>
+render partial: "attraction", collection: @attractions
+<%#= link_to 'Edit', edit_favorites_list_path(@favorites_list) %> |
+<%#= link_to 'Back', favorites_lists_path %>

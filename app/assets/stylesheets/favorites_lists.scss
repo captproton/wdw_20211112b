@@ -1,0 +1,81 @@
+// Place all the styles related to the favorites_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "font-awesome";
+
+.toggle {
+  cursor: pointer;
+}
+
+.switch {
+  background: #ddd;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 10px;
+  height: 20px;
+  position: relative;
+  width: 50px;
+}
+
+.switch:after {
+  background: magenta;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 15px;
+}
+
+input[type="checkbox"] {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  top: -999999999em;
+  left: auto;
+  position: absolute;
+}
+
+span {
+  font-weight: bold;
+}
+.attraction-name {
+     height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+input[type="checkbox"]:checked ~ .yes  {
+  color: magenta;
+}
+
+input[type="checkbox"]:not(:checked) ~ .switch:after {
+  left: auto;
+  right: 3px;
+}
+
+input[type="checkbox"]:not(:checked) ~ .attraction-name {
+}
+input[type="checkbox"]:checked ~ .attraction-name {
+  font-weight: bold;
+}
+
+.custom-checkbox input[type="checkbox"],
+    .custom-checkbox .checked {
+    display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checked
+{
+    display: inline-block;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+{
+    display: none;
+}
+
+.fa-check-square {color:magenta}        
+.fa-square-o {color:#888}

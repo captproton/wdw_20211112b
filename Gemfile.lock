@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/wdwhub/touringplans.git
+  revision: a8ca2d7fc01956c670bc28eee8ed672402536b5c
+  branch: develop
+  specs:
+    touringplans (0.3.6)
+      dry-struct (~> 1.4)
+      httparty (~> 0.19.0)
+
+GIT
+  remote: https://github.com/wdwhub/wdw_sources.git
+  revision: 1bcbcf4ece8f84bc1c5977c151c04052791d3a47
+  branch: main
+  specs:
+    wdw_sources (0.2.2)
+      rails (~> 6.1.4, >= 6.1.4.1)
+      touringplans (~> 0.3, >= 0.3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,12 +97,40 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dry-configurable (0.13.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.6)
+    dry-container (0.9.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.13, >= 0.13.0)
+    dry-core (0.7.1)
+      concurrent-ruby (~> 1.0)
+    dry-inflector (0.2.1)
+    dry-logic (1.2.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.5, >= 0.5)
+    dry-struct (1.4.0)
+      dry-core (~> 0.5, >= 0.5)
+      dry-types (~> 1.5)
+      ice_nine (~> 0.11)
+    dry-types (1.5.1)
+      concurrent-ruby (~> 1.0)
+      dry-container (~> 0.3)
+      dry-core (~> 0.5, >= 0.5)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.10.0)
     ffi (1.15.4)
+    font-awesome-rails (4.7.0.7)
+      railties (>= 3.2, < 7)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    httparty (0.19.1)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     listen (3.7.0)
@@ -98,9 +144,13 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0901)
     mini_mime (1.1.2)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
@@ -207,6 +257,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  font-awesome-rails (~> 4.7, >= 4.7.0.7)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
@@ -216,8 +267,10 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
+  touringplans!
   turbolinks (~> 5)
   tzinfo-data
+  wdw_sources!
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
